@@ -1,5 +1,6 @@
 #include "Nodo.cpp"
 #include "BTree.cpp"
+#include "utilities.h"
 
 #include <iostream>
 #include <string.h>
@@ -14,14 +15,18 @@ int main()
 {
 
     BTree tree(3);
+    createFile();
     string texto;
     ifstream archivo;
-    archivo.open("archivoTerminado.txt",ios::in);
-    
+    archivo.open("archivoTerminado.txt", ios::in);
+
     getline(archivo, texto);
-    for(int k = 0 ; k < 100; k++) {
+    while (!archivo.eof())
+    {
         int num = std::stoi(texto);
+        cout << num << endl;
         tree.insert(num);
+        getline(archivo, texto);
     }
 
     cout << "Traversal of the constucted tree is ";
