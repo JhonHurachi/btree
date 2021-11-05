@@ -2,6 +2,10 @@
 #include "BTree.cpp"
 
 #include <iostream>
+#include <string.h>
+#include <fstream>
+#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -10,22 +14,17 @@ int main()
 {
 
     BTree tree(3);
-
-    tree.insert(13);
-
-    tree.insert(8);
-
-    tree.insert(5);
-
-    tree.insert(6);
-
-    tree.insert(11);
-
-    tree.insert(3);
-
-    tree.insert(7);
-
-    tree.insert(27);
+    string texto;
+    ifstream archivo;
+    archivo.open("archivoTerminado.txt",ios::in);
+    
+    getline(archivo, texto);
+    while(!archivo.eof()) {
+        int num = std::stoi(texto);
+        cout<<num<<endl;
+        tree.insert(num);
+        getline(archivo, texto);
+    }
 
     cout << "Traversal of the constucted tree is ";
 
