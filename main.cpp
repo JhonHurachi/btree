@@ -28,47 +28,19 @@ int main()
         getline(archivo, texto);
     }
 
-    cout << "Traversal of the constucted tree is ";
+    if (tree.search(6) != nullptr)
 
-    tree.traverse();
-
-    int k = 6;
-
-    if (tree.search(k) != NULL)
-
-        cout << "\nPresent";
+        cout << "\nPresente";
 
     else
 
-        cout << "\nNot Present";
-
-    k = 15;
-
-    if (tree.search(k) != NULL)
-
-        cout << "\nPresent";
-
-    else
-
-        cout << "\nNot Present";
-
-    cout << "Traversal of tree constructed is\n";
-
-    tree.traverse();
+        cout << "\nAusente";
 
     cout << endl;
 
     tree.remove(6);
 
-    cout << "Traversal of tree after deleting 6\n";
-
-    tree.traverse();
-
-    cout << endl;
-
-    tree.remove(13);
-
-    cout << "Traversal of tree after deleting 13\n";
+    cout << "El árbol organizado horizontalmente es: \n";
 
     tree.traverse();
 

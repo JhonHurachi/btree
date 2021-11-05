@@ -80,7 +80,7 @@ void BTree::remove(int k)
 
     //if the root node has no keys.
 
-    //If it has a child, set root to NULL otherwise.
+    //If it has a child, set root to nullptr otherwise.
 
     if (root->n == 0)
 

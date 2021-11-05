@@ -7,20 +7,20 @@ class Nodo
 
     int t;
 
-    Nodo **c; // A child pointers array
+    Nodo **c; // Array de punteros hijo
 
     int n;
 
-    bool leaf; // returns true if tree is empty
+    bool leaf; // Devuelve true si es una hoja
 
 public:
-    Nodo(int _t, bool _leaf); // Nodo class constructor
+    Nodo(int _t, bool _leaf); // Constructor
 
-    // A function to insert a new key in the subtree rooted with non full node.
+    // Inserta una nueva llave en el nodo raiz, si el nodo no está lleno
 
     void insertnonfull(int k);
 
-    // A function to split the child y of this node.
+    // Separar el hijo "y" de su nodo
 
     void splitchild(int i, Nodo *y);
 
@@ -28,7 +28,7 @@ public:
 
     // A function to search the key in the b-tree
 
-    Nodo *search(int k); // if k not found the returns NULL
+    Nodo *search(int k); // if k not found the returns nullptr
 
     int findkey(int k); // a function to find a key in the btree
 

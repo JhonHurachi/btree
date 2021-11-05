@@ -144,7 +144,7 @@ Nodo *Nodo::search(int k)
 
 {
 
-    //we will search the key which is greater than
+    // we will search the key which is greater than
 
     int i = 0;
 
@@ -160,7 +160,7 @@ Nodo *Nodo::search(int k)
 
     if (leaf == true)
 
-        return NULL;
+        return nullptr;
 
     return c[i]->search(k);
 }
