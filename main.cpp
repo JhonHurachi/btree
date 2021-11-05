@@ -19,11 +19,9 @@ int main()
     archivo.open("archivoTerminado.txt",ios::in);
     
     getline(archivo, texto);
-    while(!archivo.eof()) {
+    for(int k = 0 ; k < 100; k++) {
         int num = std::stoi(texto);
-        cout<<num<<endl;
         tree.insert(num);
-        getline(archivo, texto);
     }
 
     cout << "Traversal of the constucted tree is ";
