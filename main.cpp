@@ -14,7 +14,7 @@ int main()
 
 {
 
-    BTree tree(3);
+    BTree tree(128);
     createFile();
     string texto;
     ifstream archivo;
@@ -24,7 +24,6 @@ int main()
     while (!archivo.eof())
     {
         int num = std::stoi(texto);
-        cout << num << endl;
         tree.insert(num);
         getline(archivo, texto);
     }
